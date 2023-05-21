@@ -1,0 +1,48 @@
+.title {
+  font-family: var(--font-text-2);
+  color: inherit;
+  line-height: 120%;
+  text-transform: uppercase;
+
+  &--big {
+    font-size: 64px;
+    line-height: 100%;
+  }
+
+  &--mid {
+    font-size: 36px;
+  }
+
+  &--min {
+    font-size: 24px;
+    color: #201c1c;
+  }
+}
+
+@media (max-width: 1000px) {
+  .title {
+    &--big {
+      font-size: 44px;
+    }
+    &--mid {
+      font-size: 28px;
+    }
+    &--min {
+      font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    &--big {
+      font-size: 34px;
+    }
+    &--mid {
+      font-size: 24px;
+    }
+    &--min {
+      font-size: 18px;
+    }
+  }
+}

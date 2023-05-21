@@ -1,0 +1,37 @@
+.construction {
+  margin-bottom: 120px;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 1042px;
+    display: flex;
+    margin: 0 auto 60px;
+  }
+
+  &__btn {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .construction {
+    margin-bottom: 60px;
+    &__title {
+      margin-bottom: 30px;
+    }
+    &__img {
+      margin-bottom: 30px;
+    }
+  }
+}

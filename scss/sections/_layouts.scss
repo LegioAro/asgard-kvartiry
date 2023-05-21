@@ -1,0 +1,139 @@
+.layouts {
+  margin-bottom: 120px;
+  &__wrapper {
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 74px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 40px;
+  }
+
+  &__item-wrapper {
+    background-color: #efefef;
+    border-radius: 10px;
+    padding: 40px 55px;
+  }
+
+  &__item-suptitle {
+    text-align: right;
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item-title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 125%;
+    letter-spacing: -0.04em;
+    color: #505050;
+    margin-bottom: 20px;
+  }
+
+  &__item-elems {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+  }
+
+  &__item-elem {
+  }
+
+  &__item-elem-img {
+    display: flex;
+    margin-bottom: 10px;
+    cursor: pointer;
+    overflow: hidden;
+
+    &:hover {
+      img {
+        transform: scale(1.2);
+      }
+    }
+
+    img {
+      transition: 0.3s;
+    }
+  }
+
+  &__item-elem-text {
+    color: #403a3a;
+  }
+}
+
+@media (max-width: 1200px) {
+  .layouts {
+    &__item-wrapper {
+      padding: 40px 20px;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .layouts {
+    &__item-elems {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__item-elem {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .layouts {
+    margin-bottom: 60px;
+    &__title {
+      margin-bottom: 30px;
+    }
+    &__item-wrapper {
+      padding: 20px;
+    }
+    &__items {
+      grid-template-columns: 1fr;
+    }
+    &__item-title {
+      font-size: 20px;
+    }
+    &__item-elems {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &__item-elem {
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .layouts {
+    &__item-wrapper {
+      padding: 20px;
+    }
+    &__items {
+      grid-template-columns: 1fr;
+    }
+    &__item-title {
+      font-size: 20px;
+    }
+    &__item-elems {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__item-elem {
+      max-width: 450px;
+    }
+  }
+}

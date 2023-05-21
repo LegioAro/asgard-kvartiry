@@ -1,0 +1,31 @@
+.gtmpl--3-4 {
+  display: grid;
+  grid-template-columns: 3fr 4fr;
+  grid-column-gap: 90px;
+}
+
+.gtmpl--2 {
+  display: grid;
+  grid-template-columns: 1fr 2.4fr;
+  grid-column-gap: 20px;
+}
+
+@media (max-width: 1350px) {
+  .gtmpl--3-4 {
+    grid-column-gap: 40px;
+  }
+}
+
+@media (max-width: 1250px) {
+  .gtmpl--3-4 {
+    grid-template-columns: 2fr 3fr;
+  }
+}
+
+@media (max-width: 850px) {
+  .gtmpl--3-4,
+  .gtmpl--2 {
+    grid-template-columns: 1fr;
+    grid-row-gap: 30px;
+  }
+}
