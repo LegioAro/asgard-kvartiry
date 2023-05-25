@@ -1,17 +1,17 @@
 //sliders
 
-const swiper = new Swiper('.about__slider', {
+const swiper = new Swiper('.slider-1', {
   slidesPerView: 1,
   spaceBetween: 20,
   loop: true,
 
   navigation: {
-    nextEl: '.about__wrapper .about__slider-arrow--r',
-    prevEl: '.about__wrapper .about__slider-arrow--l',
+    nextEl: '.about__slider-1 .about__slider-arrow--r',
+    prevEl: '.about__slider-1 .about__slider-arrow--l',
   },
 
   pagination: {
-    el: '.about__slider-pagination',
+    el: '.about__slider-1 .about__slider-pagination',
     bulletActiveClass: 'about__slider-pagination-elem--active',
     bulletClass: 'about__slider-pagination-elem',
     type: 'bullets',
@@ -25,6 +25,66 @@ const swiper = new Swiper('.about__slider', {
     },
 
     1150: {
+      slidesPerView: 1,
+    },
+  },
+});
+
+const swiper2 = new Swiper('.slider-2', {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  loop: true,
+
+  navigation: {
+    nextEl: '.about__slider-2 .about__slider-arrow--r',
+    prevEl: '.about__slider-2 .about__slider-arrow--l',
+  },
+
+  pagination: {
+    el: '.about__slider-2 .about__slider-pagination',
+    bulletActiveClass: 'about__slider-pagination-elem--active',
+    bulletClass: 'about__slider-pagination-elem',
+    type: 'bullets',
+    clickable: true,
+  },
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1.2,
+      centeredSlides: true,
+    },
+
+    1540: {
+      slidesPerView: 1,
+    },
+  },
+});
+
+const swiper3 = new Swiper('.slider-3', {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  loop: true,
+
+  navigation: {
+    nextEl: '.about__slider-3 .about__slider-arrow--r',
+    prevEl: '.about__slider-3 .about__slider-arrow--l',
+  },
+
+  pagination: {
+    el: '.about__slider-3 .about__slider-pagination',
+    bulletActiveClass: 'about__slider-pagination-elem--active',
+    bulletClass: 'about__slider-pagination-elem',
+    type: 'bullets',
+    clickable: true,
+  },
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1.2,
+      centeredSlides: true,
+    },
+
+    1400: {
       slidesPerView: 1,
     },
   },
@@ -100,6 +160,7 @@ const reviewZoomBtns = review.querySelectorAll('.review__btn');
 if (reviewBtns.length > 0 && reviewImg) {
   reviewBtns.forEach((reviewBtn) => {
     reviewBtn.addEventListener('click', () => {
+      review.classList.remove('review--scale');
       const sourceBigImg = reviewBtn.getAttribute('data-review-big');
       reviewImg.setAttribute('src', sourceBigImg);
     });

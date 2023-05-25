@@ -6,6 +6,19 @@
 
   &__slider {
     overflow: hidden;
+
+    &-3 {
+      .about__slider {
+        max-width: 1234px;
+        margin: 0 auto;
+      }
+      .about__slider-arrow--l {
+        left: 0px;
+      }
+      .about__slider-arrow--r {
+        right: 0px;
+      }
+    }
   }
 
   &__slider-arrows {
@@ -79,6 +92,13 @@
     height: auto;
     background-color: #efefef;
     backdrop-filter: blur(25px);
+
+    &--tmpl-2 {
+      display: flex;
+      overflow: hidden;
+      border-radius: 10px;
+      height: 600px;
+    }
   }
 
   &__slider-item-img {
@@ -154,6 +174,54 @@
     &__slider-arrow {
       display: none;
     }
+    &__slider {
+      &-3 {
+        .about__slider-arrow {
+          display: flex;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1530px) {
+  .about {
+    &__slider {
+      &-2 {
+        .about__slider {
+          width: auto;
+          max-width: fit-content;
+          margin: 0 -20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .about {
+    &__slider {
+      &-3 {
+        .about__slider {
+          width: auto;
+          max-width: fit-content;
+          margin: 0 -20px;
+        }
+        .about__slider-arrow {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1350px) {
+  .about {
+    &__slider-item {
+      &--tmpl-2 {
+        height: 500px;
+      }
+    }
   }
 }
 
@@ -171,6 +239,16 @@
     }
     &__slider-item-btn {
       max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .about {
+    &__slider-item {
+      &--tmpl-2 {
+        height: 400px;
+      }
     }
   }
 }
@@ -199,11 +277,47 @@
       max-width: 320px;
       margin: auto auto 0;
     }
+
+    &__slider-item {
+      &--tmpl-2 {
+        height: 350px;
+      }
+    }
   }
 }
 
 @media (max-width: 768px) {
   .about {
     margin-bottom: 110px;
+  }
+}
+
+@media (max-width: 700px) {
+  .about {
+    &__slider-item {
+      &--tmpl-2 {
+        height: 300px;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .about {
+    &__slider-item {
+      &--tmpl-2 {
+        height: 250px;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .about {
+    &__slider-item {
+      &--tmpl-2 {
+        height: 200px;
+      }
+    }
   }
 }

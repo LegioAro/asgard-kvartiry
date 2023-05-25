@@ -36,6 +36,11 @@
   justify-content: center;
   width: 100%;
   max-width: 1496px;
+  height: 650px;
+
+  img {
+    object-fit: contain;
+  }
 
   &--scale {
     overflow: hidden;
