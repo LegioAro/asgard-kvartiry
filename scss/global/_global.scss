@@ -47,6 +47,10 @@ body {
   &__text {
     color: inherit;
 
+    b {
+      // font-weight: 600;
+    }
+
     ul {
       margin-top: 10px;
     }

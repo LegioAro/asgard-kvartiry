@@ -92,6 +92,10 @@
     height: auto;
     background-color: #efefef;
     backdrop-filter: blur(25px);
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     &--tmpl-2 {
       display: flex;
@@ -228,7 +232,7 @@
 @media (max-width: 1150px) {
   .about {
     &__slider {
-      margin: 0 -20px;
+      // margin: 0 -20px;
     }
     &__slider-item-content {
       padding: 50px 20px;
