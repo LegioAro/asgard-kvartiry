@@ -1,94 +1,94 @@
 //sliders
 
-const swiper = new Swiper('.slider-1', {
-  slidesPerView: 1,
-  spaceBetween: 20,
-  loop: true,
+// const swiper = new Swiper('.slider-1', {
+//   slidesPerView: 1,
+//   spaceBetween: 20,
+//   loop: true,
 
-  navigation: {
-    nextEl: '.about__slider-1 .about__slider-arrow--r',
-    prevEl: '.about__slider-1 .about__slider-arrow--l',
-  },
+//   navigation: {
+//     nextEl: '.about__slider-1 .about__slider-arrow--r',
+//     prevEl: '.about__slider-1 .about__slider-arrow--l',
+//   },
 
-  pagination: {
-    el: '.about__slider-1 .about__slider-pagination',
-    bulletActiveClass: 'about__slider-pagination-elem--active',
-    bulletClass: 'about__slider-pagination-elem',
-    type: 'bullets',
-    clickable: true,
-  },
+//   pagination: {
+//     el: '.about__slider-1 .about__slider-pagination',
+//     bulletActiveClass: 'about__slider-pagination-elem--active',
+//     bulletClass: 'about__slider-pagination-elem',
+//     type: 'bullets',
+//     clickable: true,
+//   },
 
-  breakpoints: {
-    320: {
-      slidesPerView: 1.2,
-      centeredSlides: true,
-    },
+//   breakpoints: {
+//     320: {
+//       slidesPerView: 1.2,
+//       centeredSlides: true,
+//     },
 
-    1150: {
-      slidesPerView: 1,
-    },
-  },
-});
+//     1150: {
+//       slidesPerView: 1,
+//     },
+//   },
+// });
 
-const swiper2 = new Swiper('.slider-2', {
-  slidesPerView: 1,
-  spaceBetween: 20,
-  loop: true,
+// const swiper2 = new Swiper('.slider-2', {
+//   slidesPerView: 1,
+//   spaceBetween: 20,
+//   loop: true,
 
-  navigation: {
-    nextEl: '.about__slider-2 .about__slider-arrow--r',
-    prevEl: '.about__slider-2 .about__slider-arrow--l',
-  },
+//   navigation: {
+//     nextEl: '.about__slider-2 .about__slider-arrow--r',
+//     prevEl: '.about__slider-2 .about__slider-arrow--l',
+//   },
 
-  pagination: {
-    el: '.about__slider-2 .about__slider-pagination',
-    bulletActiveClass: 'about__slider-pagination-elem--active',
-    bulletClass: 'about__slider-pagination-elem',
-    type: 'bullets',
-    clickable: true,
-  },
+//   pagination: {
+//     el: '.about__slider-2 .about__slider-pagination',
+//     bulletActiveClass: 'about__slider-pagination-elem--active',
+//     bulletClass: 'about__slider-pagination-elem',
+//     type: 'bullets',
+//     clickable: true,
+//   },
 
-  breakpoints: {
-    320: {
-      slidesPerView: 1.2,
-      centeredSlides: true,
-    },
+//   breakpoints: {
+//     320: {
+//       slidesPerView: 1.2,
+//       centeredSlides: true,
+//     },
 
-    1540: {
-      slidesPerView: 1,
-    },
-  },
-});
+//     1540: {
+//       slidesPerView: 1,
+//     },
+//   },
+// });
 
-const swiper3 = new Swiper('.slider-3', {
-  slidesPerView: 1,
-  spaceBetween: 20,
-  loop: true,
+// const swiper3 = new Swiper('.slider-3', {
+//   slidesPerView: 1,
+//   spaceBetween: 20,
+//   loop: true,
 
-  navigation: {
-    nextEl: '.about__slider-3 .about__slider-arrow--r',
-    prevEl: '.about__slider-3 .about__slider-arrow--l',
-  },
+//   navigation: {
+//     nextEl: '.about__slider-3 .about__slider-arrow--r',
+//     prevEl: '.about__slider-3 .about__slider-arrow--l',
+//   },
 
-  pagination: {
-    el: '.about__slider-3 .about__slider-pagination',
-    bulletActiveClass: 'about__slider-pagination-elem--active',
-    bulletClass: 'about__slider-pagination-elem',
-    type: 'bullets',
-    clickable: true,
-  },
+//   pagination: {
+//     el: '.about__slider-3 .about__slider-pagination',
+//     bulletActiveClass: 'about__slider-pagination-elem--active',
+//     bulletClass: 'about__slider-pagination-elem',
+//     type: 'bullets',
+//     clickable: true,
+//   },
 
-  breakpoints: {
-    320: {
-      slidesPerView: 1.2,
-      centeredSlides: true,
-    },
+//   breakpoints: {
+//     320: {
+//       slidesPerView: 1.2,
+//       centeredSlides: true,
+//     },
 
-    1400: {
-      slidesPerView: 1,
-    },
-  },
-});
+//     1400: {
+//       slidesPerView: 1,
+//     },
+//   },
+// });
 
 //Modal
 function isModal() {
