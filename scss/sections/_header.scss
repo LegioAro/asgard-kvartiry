@@ -1,9 +1,36 @@
 .header {
-  margin-bottom: 234px;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  transition: 0.3s;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+    z-index: 9;
+  }
+
+  &--scroll {
+    &::before {
+      background-color: rgba(64, 58, 58, 0.9);
+      backdrop-filter: blur(25px);
+      border-radius: 5px;
+    }
+  }
   &__wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    z-index: 10;
   }
 
   &__logo {
@@ -34,6 +61,9 @@
     background-color: rgba(0, 0, 0, 0);
     cursor: pointer;
     margin-right: 29px;
+    &:last-child {
+      margin-right: 0;
+    }
 
     &:hover {
       background-color: rgba(190, 141, 52, 1);

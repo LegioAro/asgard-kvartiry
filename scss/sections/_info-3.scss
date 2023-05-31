@@ -1,0 +1,64 @@
+.info-3 {
+  background-image: linear-gradient(180deg, rgba(38, 36, 39, 0.68) 0%, rgba(38, 36, 39, 0) 34.16%),
+    linear-gradient(0deg, rgba(64, 58, 58, 0.55), rgba(64, 58, 58, 0.55)), url(../img/info/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  padding: 214px 0;
+
+  &__wrapper {
+    width: 100%;
+    max-width: 1194px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 76px;
+    background-image: linear-gradient(180deg, #262427 0%, #505050 136.85%);
+    border-radius: 10px;
+
+    color: #efefef;
+  }
+
+  &__text {
+    width: 100%;
+    max-width: 545px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 125%;
+    margin-right: 50px;
+  }
+
+  &__btn {
+    width: 100%;
+    max-width: 360px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .info-3 {
+    padding: 100px 0;
+    &__wrapper {
+      padding: 50px 30px;
+    }
+    &__text {
+      font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .info-3 {
+    padding: 60px 0;
+    &__wrapper {
+      padding: 50px 20px;
+      flex-direction: column;
+    }
+    &__text {
+      font-size: 18px;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+  }
+}

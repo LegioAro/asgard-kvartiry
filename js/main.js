@@ -1,94 +1,18 @@
-//sliders
+//header
 
-// const swiper = new Swiper('.slider-1', {
-//   slidesPerView: 1,
-//   spaceBetween: 20,
-//   loop: true,
+function headerScroll() {
+  const header = document.querySelector('.header');
+  if (window.pageYOffset > 0 && !header.classList.contains('header--scroll')) {
+    header.classList.add('header--scroll');
+  } else if (window.pageYOffset <= 0 && header.classList.contains('header--scroll')) {
+    header.classList.remove('header--scroll');
+  }
+}
+headerScroll();
 
-//   navigation: {
-//     nextEl: '.about__slider-1 .about__slider-arrow--r',
-//     prevEl: '.about__slider-1 .about__slider-arrow--l',
-//   },
-
-//   pagination: {
-//     el: '.about__slider-1 .about__slider-pagination',
-//     bulletActiveClass: 'about__slider-pagination-elem--active',
-//     bulletClass: 'about__slider-pagination-elem',
-//     type: 'bullets',
-//     clickable: true,
-//   },
-
-//   breakpoints: {
-//     320: {
-//       slidesPerView: 1.2,
-//       centeredSlides: true,
-//     },
-
-//     1150: {
-//       slidesPerView: 1,
-//     },
-//   },
-// });
-
-// const swiper2 = new Swiper('.slider-2', {
-//   slidesPerView: 1,
-//   spaceBetween: 20,
-//   loop: true,
-
-//   navigation: {
-//     nextEl: '.about__slider-2 .about__slider-arrow--r',
-//     prevEl: '.about__slider-2 .about__slider-arrow--l',
-//   },
-
-//   pagination: {
-//     el: '.about__slider-2 .about__slider-pagination',
-//     bulletActiveClass: 'about__slider-pagination-elem--active',
-//     bulletClass: 'about__slider-pagination-elem',
-//     type: 'bullets',
-//     clickable: true,
-//   },
-
-//   breakpoints: {
-//     320: {
-//       slidesPerView: 1.2,
-//       centeredSlides: true,
-//     },
-
-//     1540: {
-//       slidesPerView: 1,
-//     },
-//   },
-// });
-
-// const swiper3 = new Swiper('.slider-3', {
-//   slidesPerView: 1,
-//   spaceBetween: 20,
-//   loop: true,
-
-//   navigation: {
-//     nextEl: '.about__slider-3 .about__slider-arrow--r',
-//     prevEl: '.about__slider-3 .about__slider-arrow--l',
-//   },
-
-//   pagination: {
-//     el: '.about__slider-3 .about__slider-pagination',
-//     bulletActiveClass: 'about__slider-pagination-elem--active',
-//     bulletClass: 'about__slider-pagination-elem',
-//     type: 'bullets',
-//     clickable: true,
-//   },
-
-//   breakpoints: {
-//     320: {
-//       slidesPerView: 1.2,
-//       centeredSlides: true,
-//     },
-
-//     1400: {
-//       slidesPerView: 1,
-//     },
-//   },
-// });
+window.addEventListener('scroll', function () {
+  headerScroll();
+});
 
 //Modal
 function isModal() {
