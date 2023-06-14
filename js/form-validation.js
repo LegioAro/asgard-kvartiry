@@ -212,6 +212,8 @@ const iti = window.intlTelInput(input, {
   initialCountry: 'tr',
   utilsScript: './utils.js',
   preferredCountries: ['tr', 'ua', 'ru'],
+  autoInsertDialCode: true,
+  nationalMode: false,
 });
 
 var reset = function () {
