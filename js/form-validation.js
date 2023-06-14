@@ -214,6 +214,7 @@ const iti = window.intlTelInput(input, {
   preferredCountries: ['tr', 'ua', 'ru'],
   autoInsertDialCode: true,
   nationalMode: false,
+  singleDialCode: true,
 });
 
 var reset = function () {
