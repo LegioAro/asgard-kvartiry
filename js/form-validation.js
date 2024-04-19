@@ -154,8 +154,8 @@ inputs.forEach((input) => {
 
 //validation phone
 
-let input = document.querySelector('#phone');
-let errorMsg = document.querySelector('#error-msg');
+const inputsPhone = document.querySelectorAll('.phone');
+let errorMsgs = document.querySelectorAll('.error-msg');
 
 let errorMap;
 
@@ -208,37 +208,42 @@ switch (pageLang) {
     ];
 }
 
-const iti = window.intlTelInput(input, {
-  initialCountry: 'tr',
-  utilsScript: './utils.js',
-  preferredCountries: ['tr', 'ua', 'ru'],
-  autoInsertDialCode: true,
-  nationalMode: false,
-  singleDialCode: true,
-});
+inputsPhone.forEach((input) => {
+  const iti = window.intlTelInput(input, {
+    initialCountry: 'tr',
+    utilsScript: './utils.js',
+    preferredCountries: ['tr', 'ua', 'ru'],
+    autoInsertDialCode: true,
+    nationalMode: false,
+    singleDialCode: true,
+  });
 
-var reset = function () {
-  input.classList.remove('novalid');
-  errorMsg.innerHTML = '';
-};
-
-// on blur: validate
-input.addEventListener('blur', function () {
-  reset();
-  if (input.value.trim()) {
-    if (iti.isValidNumber()) {
+  errorMsgs.forEach((errorMsg) => {
+    var reset = function () {
       input.classList.remove('novalid');
-      errorMsg.classList.remove('novalid');
-    } else {
-      input.classList.add('novalid');
-      errorMsg.classList.add('novalid');
+      errorMsg.innerHTML = '';
+    };
 
-      var errorCode = iti.getValidationError();
-      errorMsg.innerHTML = errorMap[errorCode];
-    }
-  }
+    // on blur: validate
+    input.addEventListener('blur', function () {
+      reset();
+      if (input.value.trim()) {
+        if (iti.isValidNumber()) {
+          input.classList.remove('novalid');
+          errorMsg.classList.remove('novalid');
+        } else {
+          input.classList.add('novalid');
+          errorMsg.classList.add('novalid');
+
+          var errorCode = iti.getValidationError();
+          errorMsg.innerHTML = errorMap[errorCode];
+        }
+      }
+    });
+    // on keyup / change flag: reset
+    input.addEventListener('change', reset);
+    input.addEventListener('keyup', reset);
+  });
 });
 
-// on keyup / change flag: reset
-input.addEventListener('change', reset);
-input.addEventListener('keyup', reset);
+const qwe = document.querySelector('.form__input');

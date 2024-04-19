@@ -51,27 +51,46 @@ function isModalClose() {
 }
 isModalClose();
 
-//Form
-const form = document.querySelector('#form');
-const agreeCheckbox = form.querySelector('#agree');
-form.addEventListener('submit', function (e) {
-  e.preventDefault();
-  let formInputs = form.querySelectorAll('input');
-  let result = true;
+const forms = document.querySelectorAll('.form-send');
 
-  formInputs.forEach((input) => {
-    if (input.classList.contains('novalid')) {
-      result = false;
+forms.forEach((form) => {
+  const agreeCheckbox = form.querySelector('.form-agree');
+  // const downloadFile = form.querySelector('.form-download');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    let formInputs = form.querySelectorAll('input');
+    let result = true;
+
+    formInputs.forEach((input) => {
+      if (input.classList.contains('novalid')) {
+        result = false;
+      }
+
+      if (input.getAttribute('type') === 'tel' && input.value.length < 4) {
+        result = false;
+      }
+    });
+
+    if (agreeCheckbox) {
+      if (!agreeCheckbox.checked) {
+        result = false;
+      }
+    }
+
+    if (result) {
+      // if (downloadFile) {
+      //   // const htmlLang = document.querySelector('html').getAttribute('lang');
+      //   // const download = document.createElement('a');
+      //   // download.setAttribute('href', `./documents/presentation-${htmlLang}.pdf`);
+      //   // download.setAttribute('download', `presentation-${htmlLang}.pdf`);
+      //   // download.click();
+      // }
+
+      form.submit();
+      form.reset();
     }
   });
-
-  if (agreeCheckbox && !agreeCheckbox.checked) {
-    result = false;
-  }
-
-  if (result) {
-    form.submit();
-  }
 });
 
 //review
